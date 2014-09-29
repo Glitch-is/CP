@@ -7,7 +7,7 @@ Competitive Programming Library for Python 3
     import cp
 
 ## Functions
-    **Primes:**
+    Primes:
         isPrime(n)
         sieve(n)
         
