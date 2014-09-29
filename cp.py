@@ -65,7 +65,7 @@ def _fib(n):
         else:
             return (d, c + d)
 
- """Returns all prime factors of number"""
+"""Returns all prime factors of number"""
 def PrimeFactors(n):
     #Returns factors of n
 
@@ -82,6 +82,7 @@ def PrimeFactors(n):
                 primeList.append(n)
             break
     return primeList
+
 """Returns number of divisors"""
 def NumberOfDivisors(n):
     #Returns the number of divisors of n
@@ -103,13 +104,7 @@ def NumberOfDivisors(n):
         res *= (count+1)
     return res
 
+
 """Checks if number is palindrome"""
 def isPalindrome(n):
-    reversed = 0
-    tmp = n
-    while tmp != 0:
-        reversed*= 10
-        reversed += tmp % 10
-        tmp /= 10
-    if n == reversed: return True
-    return False
+    return str(n) == str(n)[::-1]
