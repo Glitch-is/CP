@@ -92,6 +92,55 @@ def addFractions(a, b):
     return [denom / a[1] * a[0] + denom / b[1] * b[0], denom]
 
 """Reduces a fraction to it's simples form"""
-def reduceFraction(a)
+def reduceFraction(a):
     b = gcd(a[0], a[1])
     return [a[0] / b, a[1] / b]
+
+ """Returns all prime factors of number"""
+def PrimeFactors(n):
+    #Returns factors of n
+
+    primeList = []
+    d = 2
+    while n != 0:
+        if n % d == 0:
+            primeList.append(d)
+            n /= d
+        else:
+            d += 1
+        if d*d > n:
+            if n > 1:
+                primeList.append(n)
+            break
+    return primeList
+"""Returns number of divisors"""
+def NumberOfDivisors(n):
+    #Returns the number of divisors of n
+
+    factors = PrimeFactors(n)
+    tmp = factors[0]
+    res,count = 1, 0
+
+    for x in range(len(factors)):
+        if factors[x] != tmp:
+            tmp = factors[x]
+            res *= (count+1)
+            count = 1
+            if x == len(factors):
+                res *= 2
+        else:
+            count += 1
+    if count > 0:
+        res *= (count+1)
+    return res
+
+"""Checks if number is palindrome"""
+def isPalindrome(n):
+    reversed = 0
+    tmp = n
+    while tmp != 0:
+        reversed*= 10
+        reversed += tmp % 10
+        tmp /= 10
+    if n == reversed: return True
+    return False
