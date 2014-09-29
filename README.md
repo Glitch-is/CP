@@ -3,30 +3,25 @@ CP
 
 Competitive Programming Library for Python 3
 
-##Usage
-```import cp```
+## Usage
+    import cp
 
-##Functions
-    ####Primes
-        ```
+## Functions
+    Primes:
         isPrime(n)
         sieve(n)
-        ```
-    ####GCD
-        ```
+        
+    GCD:
         gcd(a, b)
         lcm(a, b)
-        ```
-    ####Fibonacci
-        ```
+        
+    Fibonacci:
         fib(n)
-        ```
-    ####Fractions
-        ```
+        
+    Fractions:
         multiplyFractions(a, b)
         addFractions(a, b)
         reduceFraction(a)
-        ```
 
     Documentation can be located in the function's implmentation
 
