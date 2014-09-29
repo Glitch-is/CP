@@ -65,21 +65,6 @@ def _fib(n):
         else:
             return (d, c + d)
 
-<<<<<<< HEAD
-"""Multiplies fractions from two tuples and returns the result in one tuple"""
-def multiplyFractions(a, b):
-    return [a[0] * b[0], a[1] * b[1]]
-
-"""Adds two fractions together"""
-def addFractions(a, b):
-    denom = lcm(a[1], b[1])
-    return [denom / a[1] * a[0] + denom / b[1] * b[0], denom]
-
-"""Reduces a fraction to it's simples form"""
-def reduceFraction(a):
-    b = gcd(a[0], a[1])
-    return [a[0] / b, a[1] / b]
-
  """Returns all prime factors of number"""
 def PrimeFactors(n):
     #Returns factors of n
@@ -128,5 +113,3 @@ def isPalindrome(n):
         tmp /= 10
     if n == reversed: return True
     return False
-=======
->>>>>>> 7c853dfed9621fb3f8c32bcf9ca78f1baf7675b8
